@@ -12,18 +12,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Download and install Ubuntu font
+    - name: Install LibreOffice and Ubuntu font
       run: |
-        sudo apt-get install -y fontconfig
-        wget https://assets.ubuntu.com/v1/0cef8205-ubuntu-font-family-0.83.zip
-        unzip 0cef8205-ubuntu-font-family-0.83.zip -d ubuntu-font
-        sudo mkdir -p /usr/share/fonts/truetype/ubuntu
-        sudo cp ubuntu-font/ubuntu-font-family-0.83/*.ttf /usr/share/fonts/truetype/ubuntu/
+        sudo apt-get update
+        sudo apt-get update && sudo apt-get install -y libreoffice fonts-ubuntu fontconfig
         sudo fc-cache -fv
-      shell: bash
-
-    - name: Install LibreOffice
-      run: sudo apt-get update && sudo apt-get install -y libreoffice
 
     - name: Convert ODT to PDF
       run: find . -name "*.odt" -exec libreoffice --headless --convert-to pdf {} \;
