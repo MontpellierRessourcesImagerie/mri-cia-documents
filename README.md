@@ -18,5 +18,10 @@
 ## Access a document
 
 You can access the latest version of the document simply with this URL; you simply need to change the name at the end:
-`https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/mri-cia-project-form.pdf`
+`https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/{NAME_OF_THE_DOCUMENT}`
+
+## Current documents:
+
+- [MRI-CIA project form](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/mri-cia-project-form.pdf)
+
 
