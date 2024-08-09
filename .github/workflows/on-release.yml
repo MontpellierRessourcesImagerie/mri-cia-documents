@@ -18,7 +18,7 @@ jobs:
         wget https://assets.ubuntu.com/v1/0cef8205-ubuntu-font-family-0.83.zip
         unzip 0cef8205-ubuntu-font-family-0.83.zip -d ubuntu-font
         sudo mkdir -p /usr/share/fonts/truetype/ubuntu
-        sudo cp ubuntu-font/*.ttf /usr/share/fonts/truetype/ubuntu/
+        sudo cp ubuntu-font/ubuntu-font-family-0.83/*.ttf /usr/share/fonts/truetype/ubuntu/
         sudo fc-cache -fv
       shell: bash
 
