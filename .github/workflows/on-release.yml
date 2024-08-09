@@ -1,0 +1,31 @@
+name: Builds the documents on release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  convert_and_upload:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install LibreOffice
+      run: sudo apt-get update && sudo apt-get install -y libreoffice
+
+    - name: Convert ODT to PDF
+      run: |
+        find . -name "*.odt" -exec libreoffice --headless --convert-to pdf {} \;
+
+    - name: Upload PDF to release
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: |
+          $(find . -name "*.pdf" | tr '\n' ' ')
+        asset_name: |
+          $(find . -name "*.pdf" -exec basename {} \; | tr '\n' ' ')
+        asset_content_type: application/pdf
+
