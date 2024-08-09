@@ -1,21 +1,22 @@
 # MRI-CIA Documents
 
-- The repository contains the documents relative to the MRI-CIA version.
-- It allows to have a unique and constant link to the latest version of documents.
+- This repository contains the documents related to the MRI-CIA service.
+- It allows you to have a unique and constant link to the latest version of each document.
 - Files can be "built" ('odt' to 'pdf', ...) from the GitHub actions of the repository.
+- Files are "built" only when a new release is created and stored in the release's assets.
 
-## Add a new document, example with an ODT
+## Add a new document (for example, with an ODT)
 
 - Add the '.odt' file into this repository.
 - Modify the workflow (.github/workflows/on-release.yml) to "build" your document (ex: convert your '.odt' to '.pdf') on release.
 - Make your modifications as you wish and push them.
 - When you will make a new release, the PDF will be part of the assets.
-
+- Build your document's URL as described in the next session.
 
 **Note:** The ODT to PDF conversion is already insured for any ODT document at the root of this repo, you don't need to edit the workflow.
 
 ## Access a document
 
-You can access the latest version of the document simply with this URL, just change the name of the document:
+You can access the latest version of the document simply with this URL; you simply need to change the name at the end:
 `https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/mri-cia-project-form.pdf`
 
