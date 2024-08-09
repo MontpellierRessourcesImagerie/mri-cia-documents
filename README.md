@@ -14,3 +14,9 @@
 
 
 **Note:** The ODT to PDF conversion is already insured for any ODT document at the root of this repo, you don't need to edit the workflow.
+
+## Access a document
+
+You can access the latest version of the document simply with this URL, just change the name of the document:
+`https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/mri-cia-project-form.pdf`
+
