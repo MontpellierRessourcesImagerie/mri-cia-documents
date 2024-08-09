@@ -21,13 +21,16 @@ jobs:
     - name: List generated PDFs
       id: list_pdfs
       run: |
-        pdf_files=$(find . -name "*.pdf")
-        echo "PDF_FILES=$pdf_files" >> $GITHUB_ENV
+        pdf_files=$(find . -name "*.pdf" | tr '\n' ' ')
+        echo "pdf_files=$pdf_files" >> $GITHUB_ENV
+        echo "::set-output name=pdf_files::$pdf_files"
 
     - name: Upload PDF to release
       uses: actions/upload-release-asset@v1
       with:
         upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ${{ env.PDF_FILES }}
-        asset_name: ${{ env.PDF_FILES }}
+        asset_path: ${{ steps.list_pdfs.outputs.pdf_files }}
+        asset_name: ${{ steps.list_pdfs.outputs.pdf_files | basename }}
         asset_content_type: application/pdf
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
