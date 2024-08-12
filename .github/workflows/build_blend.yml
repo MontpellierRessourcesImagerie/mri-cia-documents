@@ -18,12 +18,13 @@ jobs:
         mkdir blender_bin
         tar -xf blender.tar.xz --strip-components=1 -C ./blender_bin
         chmod u+x blender_bin/blender
+        sudo apt-get install -y libegl1-mesa libgl1-mesa-glx
 
     - name: Render BLEND in PNG
       run: |
         for bld in $(find . -maxdepth 1 -name "*.blend"); do
           echo "Rendering $bld"
-          ./blender_bin/blender -b "$bld" -o // -f 1 && mv ./0001.png "$(basename "$bld" .blend).png"
+          ./blender_bin/blender -noaudio -b "$bld" -o // -f 1 && mv ./0001.png "$(basename "$bld" .blend).png"
         done
 
     - name: List and upload PNGs
