@@ -21,14 +21,14 @@ jobs:
 
     - name: Render BLEND in PNG
       run: |
-        for bld in $(find . -name "*.blend"); do
+        for bld in $(find . -maxdepth 1 -name "*.blend"); do
           echo "Rendering $bld"
           ./blender_bin/blender -b "$bld" -o // -f 1 && mv ./0001.png "$(basename "$bld" .blend).png"
         done
 
     - name: List and upload PNGs
       run: |
-        for png in $(find . -name "*.png"); do
+        for png in $(find . -maxdepth 1 -name "*.png"); do
           echo "Uploading $png"
           gh release upload ${{ github.event.release.tag_name }} "$png" --repo $GITHUB_REPOSITORY
         done
