@@ -1,7 +1,7 @@
 # MRI-CIA Documents
 
 ![blend2png](https://img.shields.io/github/actions/workflow/status/MontpellierRessourcesImagerie/mri-cia-documents/build_blend.yml?logo=blender&label=blend2png)
-![odt2pdf](https://img.shields.io/github/actions/workflow/status/MontpellierRessourcesImagerie/mri-cia-documents/build_odt.yml?logo=libreoffice&label=odt2png)
+![odt2pdf](https://img.shields.io/github/actions/workflow/status/MontpellierRessourcesImagerie/mri-cia-documents/build_odt.yml?logo=libreoffice&label=odt2pdf)
 
 -------------------------
 
