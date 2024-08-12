@@ -23,6 +23,8 @@ You can access the latest version of the document simply with this URL; you simp
 ## Current documents:
 
 - [MRI-CIA project form](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/mri-cia-project-form.pdf)
-- [The MRI image analysis service](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/the-mri-image-analysis-service.pdf)
+- [The MRI-CIA service](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/the-mri-image-analysis-service.pdf)
+- [Open-desk poster](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/open-desk-poster.png)
+- [Flash-tuto posters](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/poster-flash-tuto.png)
 
 
