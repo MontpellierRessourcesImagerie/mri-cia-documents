@@ -1,0 +1,36 @@
+name: Renders BLEND in PNG and attach to release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  convert_and_upload:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install Blender 4.1.1
+      run: |
+        wget https://mirrors.sahilister.in/blender/release/Blender4.1/blender-4.1.1-linux-x64.tar.xz -O blender.tar.xz
+        mkdir blender_bin
+        tar -xf blender.tar.xz --strip-components=1 -C ./blender_bin
+        chmod u+x blender_bin/blender
+
+    - name: Render BLEND in PNG
+      run: |
+        for bld in $(find . -name "*.blend"); do
+          echo "Rendering $bld"
+          ./blender_bin/blender -b "$bld" -o // -f 1 && mv ./0001.png "$(basename "$bld" .blend).png"
+        done
+
+    - name: List and upload PNGs
+      run: |
+        for png in $(find . -name "*.png"); do
+          echo "Uploading $png"
+          gh release upload ${{ github.event.release.tag_name }} "$png" --repo $GITHUB_REPOSITORY
+        done
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
