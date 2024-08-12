@@ -22,10 +22,13 @@ jobs:
 
     - name: Render BLEND in PNG
       run: |
+        export MESA_GL_VERSION_OVERRIDE=3.3
         for bld in $(find . -maxdepth 1 -name "*.blend"); do
           echo "Rendering $bld"
           ./blender_bin/blender -noaudio -b "$bld" -o // -f 1 && mv ./0001.png "$(basename "$bld" .blend).png"
         done
+      env:
+        DISPLAY: ":0"
 
     - name: List and upload PNGs
       run: |
