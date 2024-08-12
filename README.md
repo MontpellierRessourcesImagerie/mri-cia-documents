@@ -1,5 +1,10 @@
 # MRI-CIA Documents
 
+https://img.shields.io/github/actions/workflow/status/MontpellierRessourcesImagerie/mri-cia-documents/build_blend.yml?logo=blender&label=blend2png
+https://img.shields.io/github/actions/workflow/status/MontpellierRessourcesImagerie/mri-cia-documents/build_odt.yml?logo=libreoffice&label=odt2png
+
+-------------------------
+
 - This repository contains some documents related to the MRI-CIA service.
 - It allows you to have a unique and constant link to the latest version of each document.
 - Files can be "built" ('odt' to 'pdf', ...) from the GitHub actions of the repository.
