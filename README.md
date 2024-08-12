@@ -15,8 +15,8 @@
 
 ## Handled extensions
 
-- `.odt`
-- `.blend`
+- `.odt` → `.pdf`
+- `.blend` → `.png`
 
 ## Access a document
 
