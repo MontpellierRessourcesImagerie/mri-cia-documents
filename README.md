@@ -13,7 +13,10 @@
 - When you will make a new release, the PDF will be part of the assets.
 - Build your document's URL as described in the next session.
 
-**Note:** The ODT to PDF conversion is already insured for any ODT document at the root of this repo, you don't need to edit the workflow.
+## Handled extensions
+
+- `.odt`
+- `.blend`
 
 ## Access a document
 
