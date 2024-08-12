@@ -1,7 +1,7 @@
 # MRI-CIA Documents
 
-https://img.shields.io/github/actions/workflow/status/MontpellierRessourcesImagerie/mri-cia-documents/build_blend.yml?logo=blender&label=blend2png
-https://img.shields.io/github/actions/workflow/status/MontpellierRessourcesImagerie/mri-cia-documents/build_odt.yml?logo=libreoffice&label=odt2png
+![blend2png](https://img.shields.io/github/actions/workflow/status/MontpellierRessourcesImagerie/mri-cia-documents/build_blend.yml?logo=blender&label=blend2png)
+![odt2pdf](https://img.shields.io/github/actions/workflow/status/MontpellierRessourcesImagerie/mri-cia-documents/build_odt.yml?logo=libreoffice&label=odt2png)
 
 -------------------------
 
@@ -27,6 +27,6 @@ https://img.shields.io/github/actions/workflow/status/MontpellierRessourcesImage
 - [MRI-CIA project form](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/mri-cia-project-form.pdf)
 - [The MRI-CIA service](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/the-mri-image-analysis-service.pdf)
 - [Open-desk poster](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/open-desk-poster.png)
-- [Flash-tuto posters](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/poster-flash-tuto.png)
+- [Flash-tuto poster](https://github.com/MontpellierRessourcesImagerie/mri-cia-documents/releases/latest/download/poster-flash-tuto.png)
 
 
